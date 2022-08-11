@@ -36,21 +36,22 @@ public class CustomArrayAdapter extends ArrayAdapter {
         View rowView = inflater.inflate(layout_id, parent, false);
 
         // Obtain the UI components and do the necessary binding
-        TextView tv = rowView.findViewById(R.id.textViewGrad);
-        /*TextView tvYear = rowView.findViewById(R.id.textViewYear);
+        //TextView tv = rowView.findViewById(R.id.textViewGrad);
+        TextView tvYear = rowView.findViewById(R.id.textViewYear);
         TextView tvCourse = rowView.findViewById(R.id.textViewCourse);
-        TextView tvNumber = rowView.findViewById(R.id.textViewNumber);*/
+        TextView tvNumber = rowView.findViewById(R.id.textViewNumber);
         ImageView iv = rowView.findViewById(R.id.imageView);
 
         // Obtain the Android Version information based on the position
         Graduates current = al.get(position);
 
         // Set values to the TextView to display the corresponding information
-        /*tvYear.setText(current.getYear());
-        tvCourse.setText(current.getCourse());
-        tvNumber.setText(current.getNumOfGrad());*/
+        //tvYear.setText(current.getYear()+"");
+        tvCourse.setText("Course: " + current.getCourse());
+        tvNumber.setText("Number of Graduates: " + current.getNumOfGrad());
+        tvYear.setText("Year: " + current.getYear());
 
-        tv.setText(current.toString());
+        //tv.setText(current.toString());
         if (current.getNumOfGrad().equalsIgnoreCase("na")) {
             Picasso.get().load("https://forum-cdn.knime.com/uploads/default/original/3X/4/4/44174ad802a688fd685d3c407b210eeefc51ae95.jpeg").into(iv);
         }

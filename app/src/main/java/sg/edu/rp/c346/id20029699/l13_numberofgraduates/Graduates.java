@@ -35,13 +35,13 @@ public class Graduates {
         this.year = year;
     }
 
-    @Override
+    /*@Override
     public String toString(){
 
         String result = String.format("%s\n %s: %d\n %s: %s\n %s: %s",
                 "Graduates", "Year", year, "Course", course, "Number of Graduates", numOfGrad);
         return result;
-    }
+    }*/
 }
 
 
